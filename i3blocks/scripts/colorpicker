@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+sleep 0.5
+value=$(grabc 2>/dev/null)
+
+full_text=" $value"
+
+echo $full_text

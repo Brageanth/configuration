@@ -1,0 +1,41 @@
+separator=true
+separator_block_width=15
+margin=10
+
+align=center
+border_top=0
+border_bottom=2
+border_left=0
+border_right=0
+color=#eeeeee
+
+[Updates]
+command=echo " $(pacman -Qu | wc -l) Updates available"
+interval=3600
+color=#E4455E
+border=#C4695C
+signal=3
+
+[Spotify]
+command=echo " $(playerctl -p spotify metadata title) - $(playerctl -p spotify metadata artist)"     
+interval=3
+color=#4B9B69
+border=#5B8670
+
+[colorpicker]
+command=/home/brageanth/.config/i3blocks/scripts/colorpicker
+color=#D3C54D
+full_text=
+border=#D0C85E
+
+[Volume]
+command=/home/brageanth/.config/i3blocks/scripts/volume
+color=#6D6DAC
+border=#6868A2
+interval=1
+
+[Calendar]
+command=echo " $(date -u +'%d/%m/%Y %H:%M')"
+color=#8D5B99
+border=#836B91
+interval=2

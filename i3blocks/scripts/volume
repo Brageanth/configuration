@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+case $BLOCK_BUTTON in
+	1) pavucontrol &>/dev/null &
+esac
+
+sink=$(pactl get-default-sink)
+
+volume=$(pactl get-sink-volume $sink | grep 'Volume:' | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')
+
+full_text="  $volume"
+
+echo $full_text
